@@ -1,6 +1,8 @@
+-- openresty 获取请求参数，支持get   post(支持application/x-www-form-urlencoded)
+-- 支持 multipart/form-data
+-- 用到的第三方库是 agenth 写的 https://github.com/agentzh/lua-resty-multipart-parser 
 local _M = {}
 
-local cjson = require "cjson.safe"
 local parser = require "resty.multipart.parser"
 
 function _M.getArgs()
